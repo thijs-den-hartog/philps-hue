@@ -11,13 +11,13 @@ function myFunction() {
   var minutenOutput = document.getElementById("minutenOutput")
   var secondenOutput = document.getElementById("secondenOutput")
 
-  uurOutput.innerHTML = uur;
-  minutenOutput.innerHTML = minuten;
-  secondenOutput.innerHTML = seconden;
+  uurOutput.innerHTML = uurInput;
+  minutenOutput.innerHTML = minutenInput;
+  secondenOutput.innerHTML = secondenInput;
 
   // var secondenTimer = seconden + minuten / 60  + uur / 3600;
-  let uurSecondes = uurInput /60 /60;
-  let minutenSecondes = minutenInput /60;
+  let uurSecondes = uurInput *60 *60;
+  let minutenSecondes = minutenInput *60;
   let secondenTimer = uurSecondes + minutenSecondes + secondenInput;
 
 
