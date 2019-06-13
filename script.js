@@ -16,8 +16,13 @@ function myFunction() {
   seconden1.innerHTML = seconden;
 
   var secondenTimer = seconden + minuten * 60  + uur * 3600;
-
+  alert(secondenTimer)
+  let secondenTimer = timerseconde
+  alert(secondenTimer)
   while (true) {
+    setTimeout(tijdmineen, 1000);
 
   }
+  function myFunction() {
+    let timerseconde -=
 }
