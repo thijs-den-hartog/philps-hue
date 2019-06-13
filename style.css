@@ -4,7 +4,7 @@ body{
   background-color: #f2f2f2;
 }
 
-#uur{
+#uurInput{
   margin-left: 37%;
   margin-top: 40%;
 }
@@ -17,4 +17,10 @@ body{
   border-radius: 10px;
   border: none;
 
+}
+
+.timer{
+  float: none;
+  margin-left: 50%;
+  margin-top: 10px;;
 }
