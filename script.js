@@ -19,10 +19,12 @@ function myFunction() {
   alert(secondenTimer)
   let secondenTimer = timerseconde
   alert(secondenTimer)
-  while (true) {
+  timerloop = true
+  while (timerloop) {
     setTimeout(tijdmineen, 1000);
-
+    if {timerseconde <= 1}
+      timerloop = false
   }
-  function myFunction() {
+  function tijdmineen() {
     let timerseconde -=
 }
