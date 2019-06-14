@@ -4,9 +4,9 @@ let knop = document.getElementById('knop')
 knop.addEventListener("click", myFunction)
 
 function myFunction() {
-  var uurInput = document.getElementById("uurInput").value;
-  var minutenInput = document.getElementById("minutenInput").value;
-  var secondenInput = document.getElementById("secondenInput").value;
+  var uurInput = parseInt(document.getElementById("uurInput", 10).value);
+  var minutenInput = parseInt(document.getElementById("minutenInput", 10).value);
+  var secondenInput = parseInt(document.getElementById("secondenInput", 10).value);
   var uurOutput = document.getElementById("uurOutput")
   var minutenOutput = document.getElementById("minutenOutput")
   var secondenOutput = document.getElementById("secondenOutput")
