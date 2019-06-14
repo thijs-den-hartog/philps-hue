@@ -4,9 +4,18 @@ body{
   background-color: #f2f2f2;
 }
 
-#uurInput{
+#uurOutput{
   margin-left: 37%;
-  margin-top: 40%;
+
+
+}
+#minutenOutput{
+  margin-left: 52%;
+
+}
+#secondenOutput{
+  margin-left: 67%;
+
 }
 
 #knop{
@@ -19,8 +28,9 @@ body{
 
 }
 
-.timer{
-  float: none;
-  margin-left: 50%;
-  margin-top: 10px;;
+.invoer{
+  margin-left: 37%;
+  margin-top: 400px;
+  height: 20px;
+
 }
