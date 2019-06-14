@@ -1,39 +1,30 @@
 let knop = document.getElementById('knop')
 
+lol
 
 knop.addEventListener("click", myFunction)
-alert("hallo");
+
 function myFunction() {
-  var uur = document.getElementById("uur").value;
-  var minuten = document.getElementById("minuten").value;
-  var seconden = document.getElementById("seconden").value;
-  var uur1 = document.getElementById("uur1")
-  var minuten1 = document.getElementById("minuten1")
-  var seconden1 = document.getElementById("seconden1")
+  var uurInput = parseInt(document.getElementById("uurInput", 10).value);
+  var minutenInput = parseInt(document.getElementById("minutenInput", 10).value);
+  var secondenInput = parseInt(document.getElementById("secondenInput", 10).value);
+  var uurOutput = document.getElementById("uurOutput")
+  var minutenOutput = document.getElementById("minutenOutput")
+  var secondenOutput = document.getElementById("secondenOutput")
 
-  uur1.innerHTML = uur;
-  minuten1.innerHTML = minuten;
-  seconden1.innerHTML = seconden;
+  uurOutput.innerHTML = uurInput;
+  minutenOutput.innerHTML = minutenInput;
+  secondenOutput.innerHTML = secondenInput;
 
-  var secondenTimer = seconden + minuten * 60  + uur * 3600;
-
-}
-
-let timerseconde = 0
-// secondenTimer = timerseconde;
-timerseconde = prompt("schrijf je tijd in sekondes")
-alert(timerseconde);
+  // var secondenTimer = seconden + minuten / 60  + uur / 3600;
+  var uurSecondes = uurInput *60 *60;
+  var minutenSecondes = minutenInput *60;
+  var secondenTimer = uurSecondes + minutenSecondes + secondenInput;
 
 
+  alert(secondenTimer);
 
-let interv = setInterval(intFunc, 1000);
+  while (true) {
 
-function intFunc () {
-  console.log("ik stop ermee")
-  timerseconde -= 1 ;
-  if (timerseconde <= 0){
-    clearInterval(interv);
-    console.log("ik stop er nu egt mee!!!")
-    alert("cool")
   }
 }
