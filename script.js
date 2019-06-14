@@ -16,9 +16,9 @@ function myFunction() {
   secondenOutput.innerHTML = secondenInput;
 
   // var secondenTimer = seconden + minuten / 60  + uur / 3600;
-  let uurSecondes = uurInput *60 *60;
-  let minutenSecondes = minutenInput *60;
-  let secondenTimer = uurSecondes + minutenSecondes + secondenInput;
+  var uurSecondes = uurInput *60 *60;
+  var minutenSecondes = minutenInput *60;
+  var secondenTimer = uurSecondes + minutenSecondes + secondenInput;
 
 
   alert(secondenTimer);
