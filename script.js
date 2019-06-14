@@ -28,6 +28,6 @@ while (timerloop) {
     timerloop = false;
   }
   function tijdmineen() {
-    timerseconde -= ;
+    timerseconde -= 1 ;
   }
 }
