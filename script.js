@@ -2,7 +2,7 @@ let knop = document.getElementById('knop')
 
 
 knop.addEventListener("click", myFunction)
-
+alert("hallo");
 function myFunction() {
   var uur = document.getElementById("uur").value;
   var minuten = document.getElementById("minuten").value;
@@ -17,7 +17,23 @@ function myFunction() {
 
   var secondenTimer = seconden + minuten * 60  + uur * 3600;
 
-  while (true) {
+}
 
+let timerseconde = 0
+// secondenTimer = timerseconde;
+timerseconde = prompt("schrijf je tijd in sekondes")
+alert(timerseconde);
+
+setInterval(function(){ timerseconde -= 1 ;); }, 3000);
+
+timerloop = true;
+while (timerloop) {
+  setTimeout(tijdmineen, 1000);
+  if (timerseconde <= 1){
+    timerloop = false;
+  }
+  function tijdmineen() {
+    timerseconde -= 1 ;
+    alert("cool")
   }
 }
