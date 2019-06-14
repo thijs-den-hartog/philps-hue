@@ -4,24 +4,18 @@ let knop = document.getElementById('knop')
 knop.addEventListener("click", myFunction)
 
 function myFunction() {
-  var uurInput = parseInt(document.getElementById("uurInput", 10).value);
-  var minutenInput = parseInt(document.getElementById("minutenInput", 10).value);
-  var secondenInput = parseInt(document.getElementById("secondenInput", 10).value);
-  var uurOutput = document.getElementById("uurOutput")
-  var minutenOutput = document.getElementById("minutenOutput")
-  var secondenOutput = document.getElementById("secondenOutput")
+  var uur = document.getElementById("uur").value;
+  var minuten = document.getElementById("minuten").value;
+  var seconden = document.getElementById("seconden").value;
+  var uur1 = document.getElementById("uur1")
+  var minuten1 = document.getElementById("minuten1")
+  var seconden1 = document.getElementById("seconden1")
 
-  uurOutput.innerHTML = uurInput;
-  minutenOutput.innerHTML = minutenInput;
-  secondenOutput.innerHTML = secondenInput;
+  uur1.innerHTML = uur;
+  minuten1.innerHTML = minuten;
+  seconden1.innerHTML = seconden;
 
-  // var secondenTimer = seconden + minuten / 60  + uur / 3600;
-  var uurSecondes = uurInput *60 *60;
-  var minutenSecondes = minutenInput *60;
-  var secondenTimer = uurSecondes + minutenSecondes + secondenInput;
-
-
-  alert(secondenTimer);
+  var secondenTimer = seconden + minuten * 60  + uur * 3600;
 
   while (true) {
 
