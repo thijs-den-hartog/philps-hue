@@ -24,16 +24,16 @@ let timerseconde = 0
 timerseconde = prompt("schrijf je tijd in sekondes")
 alert(timerseconde);
 
-setInterval(function(){ timerseconde -= 1 ;); }, 3000);
 
-timerloop = true;
-while (timerloop) {
-  setTimeout(tijdmineen, 1000);
-  if (timerseconde <= 1){
-    timerloop = false;
-  }
-  function tijdmineen() {
-    timerseconde -= 1 ;
+
+let interv = setInterval(intFunc, 1000);
+
+function intFunc () {
+  console.log("ik stop ermee")
+  timerseconde -= 1 ;
+  if (timerseconde <= 0){
+    clearInterval(interv);
+    console.log("ik stop er nu egt mee!!!")
     alert("cool")
   }
 }
