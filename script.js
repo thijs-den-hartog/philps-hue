@@ -1,30 +1,36 @@
 let knop = document.getElementById('knop')
+let interv;
 
-lol
+let secondenTimer;
 
 knop.addEventListener("click", myFunction)
 
 function myFunction() {
-  var uurInput = parseInt(document.getElementById("uurInput", 10).value);
-  var minutenInput = parseInt(document.getElementById("minutenInput", 10).value);
-  var secondenInput = parseInt(document.getElementById("secondenInput", 10).value);
-  var uurOutput = document.getElementById("uurOutput")
-  var minutenOutput = document.getElementById("minutenOutput")
-  var secondenOutput = document.getElementById("secondenOutput")
+  var uurInput = parseInt(document.getElementById("uur", 10).value);
+  var minutenInput = parseInt(document.getElementById("minuten", 10).value);
+  var secondenInput = parseInt(document.getElementById("seconden", 10).value);
+  var uurOutput = document.getElementById("uur1")
+  var minutenOutput = document.getElementById("minuten1")
+  var secondenOutput = document.getElementById("seconden1")
 
   uurOutput.innerHTML = uurInput;
   minutenOutput.innerHTML = minutenInput;
   secondenOutput.innerHTML = secondenInput;
 
-  // var secondenTimer = seconden + minuten / 60  + uur / 3600;
+
   var uurSecondes = uurInput *60 *60;
   var minutenSecondes = minutenInput *60;
-  var secondenTimer = uurSecondes + minutenSecondes + secondenInput;
+  secondenTimer = uurSecondes + minutenSecondes + secondenInput;
 
+  interv = setInterval(intFunc, 1000);
+}
 
-  alert(secondenTimer);
-
-  while (true) {
-
+function intFunc () {
+  console.log("ik stop ermee")
+  secondenTimer -= 1 ;
+  if (secondenTimer <= 0){
+    clearInterval(interv);
+    console.log("ik stop er nu egt mee!!!")
+    alert("cool")
   }
 }
