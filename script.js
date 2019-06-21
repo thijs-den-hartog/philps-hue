@@ -1,5 +1,6 @@
 let knop = document.getElementById('knop')
-
+let interv;
+let secondenTimer;
 
 knop.addEventListener("click", myFunction)
 
@@ -23,7 +24,16 @@ function myFunction() {
 
   alert(secondenTimer);
 
-  while (true) {
+  interv = setInterval(intFunc, 1000);
+  alert(secondenTimer)
+}
 
+function intFunc () {
+  console.log("aan het tellen...")
+  secondenTimer -= 1 ;
+  if (secondenTimer <= 0){
+    clearInterval(interv);
+    console.log("oke klaar")
+    alert("cool")
   }
 }
