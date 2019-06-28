@@ -5,15 +5,18 @@ const BASE_URL = `http://${BRIDGE_URL}/api/${API_KEY}/lights/` //beginstuk van d
 let knop = document.getElementById('knop');
 let play = document.getElementById('play');
 let pause = document.getElementById('pause');
-let interv;
+let intervID;
 let secondenTimer;
 let groenAan = '{"hue": 25000, "bri": 150, "on": true}';
 let roodAan = '{"hue": 0, "bri": 150, "on": true}';
-let uit = '{"on": false}'
+let uit = '{"on": false}';
 let knipperinterval;
 let aan = false;
+let knipperTimerTijd = 1000;
 
-knop.addEventListener("click", myFunction)
+knop.addEventListener("click", myFunction);
+play.addEventListener("click", () => intervID = setInterval(intFunc, knipperTimerTijd));
+pause.addEventListener("click", function () {console.log("pauze"); clearInterval(intervID);});
 
 sendRequest(5, uit)
 
@@ -31,7 +34,7 @@ function myFunction() {
 
   // alert(secondenTimer);
 
-  interv = setInterval(intFunc, 1000);
+  intervID = setInterval(intFunc, knipperTimerTijd);
   // alert(secondenTimer)
 }
 
@@ -39,7 +42,7 @@ function intFunc () {
   console.log("aan het tellen...")
   secondenTimer -= 1 ;
   if (secondenTimer <= 0){
-    clearInterval(interv);
+    clearInterval(intervID);
     console.log("oke klaar")
     // als klaar doe dit
   if (secondenTimer <= 0){
