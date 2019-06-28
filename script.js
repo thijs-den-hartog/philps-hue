@@ -2,12 +2,20 @@ const BRIDGE_URL = "192.168.178.172"  // IP adres van de bridge
 const API_KEY = "l1SJ36Y-mE6pM48fRULsOjfFIv2tyV68AWtcXNjB"  //sleutel om de bridge aan te sturen
 const BASE_URL = `http://${BRIDGE_URL}/api/${API_KEY}/lights/` //beginstuk van de url
 
-let knop = document.getElementById('knop')
+let knop = document.getElementById('knop');
+let play = document.getElementById('play');
+let pause = document.getElementById('pause');
 let interv;
 let secondenTimer;
-let roodAan = '{"hue": 0, "bri": 255, "on": true}';
+let groenAan = '{"hue": 25000, "bri": 150, "on": true}';
+let roodAan = '{"hue": 0, "bri": 150, "on": true}';
+let uit = '{"on": false}'
+let knipperinterval;
+let aan = false;
 
 knop.addEventListener("click", myFunction)
+
+sendRequest(5, uit)
 
 function myFunction() {
   var uurInput = parseInt(document.getElementById("uurInput").value);
@@ -16,7 +24,7 @@ function myFunction() {
   var uurOutput = document.getElementById("uurOutput")
 
   uurOutput.innerHTML = uurInput + " : " + minutenInput + " : " + secondenInput;
-
+  sendRequest(5, groenAan);
   var uurSecondes = uurInput *60 *60;
   var minutenSecondes = minutenInput *60;
   secondenTimer = uurSecondes + minutenSecondes + secondenInput;
@@ -33,11 +41,27 @@ function intFunc () {
   if (secondenTimer <= 0){
     clearInterval(interv);
     console.log("oke klaar")
-    // alert("cool")
-    sendRequest(1, roodAan);
+    // als klaar doe dit
+  if (secondenTimer <= 0){
+      knipperinterval = setInterval(knipperen, 1000)
+
+    }
+  else if (secondenTimer > 0){
+    sendRequest(5, groenAan);
+  }
   }
 
   uurOutput.innerHTML = secondenNaarTijdstring(secondenTimer);
+}
+
+function knipperen (){
+  if (!aan){
+    sendRequest(5, roodAan)
+    aan = true;
+  } else {
+    sendRequest(5, uit)
+    aan = false;
+  }
 }
 
 function secondenNaarTijdstring(secondenTimer) {

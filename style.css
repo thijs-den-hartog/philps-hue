@@ -1,16 +1,15 @@
 
 #uurOutput{
-  margin-left: 37%;
+  display: flex;
+  justify-content: space-around;
+
 }
 
-
 #knop{
-  margin-top: 2%;
-  margin-top: 4px;
-  margin-left: 48%;
+  display: flex;
+  justify-content: center;
+
   background-color:  #999999;
-  padding: 16px 32px;
-  margin-top: 400px;
   height: 20px;
   border-radius: 10px;
 }
@@ -18,11 +17,32 @@
 .container{
   width: 400px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  justify-content: space-around;
   margin-left: 46%;
   margin-top: 100px;
 }
 
+.invoer{
+  display: flex;
+  justify-content: center;
+}
+
 p{
   font-size: 30px;
+}
+
+.play {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 12px solid #000;
+    border-bottom: 8px solid transparent;
+    
+}
+.pause {
+    width: 4px;
+    height: 16px;
+    border-right: 4px solid #000;
+    border-left: 4px solid #000;
 }
