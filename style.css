@@ -1,7 +1,5 @@
 
-body{
-  background-image: linear-gradient(to right, #ccffff, #3399ff);
-}
+
 
 
 #uurOutput{
@@ -51,24 +49,4 @@ p{
     height: 16px;
     border-right: 4px solid #000;
     border-left: 4px solid #000;
-}
-
-
-
-
-.invoer input {
-  width: 45px;
-  height: 42px;
-  line-height: 1.65;
-  float: left;
-  display: block;
-
-  padding-left: 20px;
-  border: 1px solid #000;
-}
-
-.invoer-nav {
-  float: left;
-  position: relative;
-  height: 42px;
 }
